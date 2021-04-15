@@ -1,0 +1,7 @@
+Implement an online quiz application. 
+The timer is set for each question. 
+If timer elapses the next question is automatically displayed.
+Going back to previous question is disabled and going to next question
+before time should also be possible.
+The app should display the results of the
+ user at the end of quiz.

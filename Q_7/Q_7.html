@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>19BCI0142 Venkata satya</title>
+    <style>
+        *{
+            font-size: 20px;
+        }
+        #user{
+            position: relative;
+            left: 20px;
+            width: 100px;
+        }
+        input[type=text]{
+            position: absolute;
+            width: 30px;
+            left: 390px;
+        }
+        #quan{
+            position: absolute;
+            width: 30px;
+            left: 370px;
+            top: 40px;
+        }
+        td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <label for="user">User</label>
+    <input type="text" name="user" id="user" >
+    <h3>Select the items :</h3>
+    <h3 id="quan">Quantity</h3>
+    <form action="">
+        <input type="checkbox" name="r1">
+        <label for="r1">Four 100 watt bulbs for Rs. 20.39 &nbsp</label> 
+        <input type="text" class="v1"> <br>
+        <input type="checkbox" name="r1">
+        <label for="r1">Eight 100 watt bulbs for Rs. 40.20</label>
+        <input type="text" class="v2"> <br>
+        <input type="checkbox" name="r1">
+        <label for="r1">Four 100 watt long life bulbs for Rs. 30.95</label>
+        <input type="text" class="v3"> <br>
+        <input type="checkbox" name="r1">
+        <label for="r1">Eight 100 watt long life bulbs for Rs. 70.49</label>
+        <input type="text" class="v4"> <br>
+        <br>
+        <input type="radio" name="card" id="visa">
+        <label for="visa">VISA</label> <br>
+        <input type="radio" name="card" id="visa">
+        <label for="master">MASTER CARD</label> <br>
+        <input type="radio" name="card" id="visa">
+        <label for="discover">DISCOVER</label> <br>
+        <input type="submit" value="submit">   
+        <button>Reset Order</button>
+    </form>
+    <div class="container">
+
+    </div>
+    <div class="container">
+        <h3>User name :</h3>
+        <h3>You have ordered following items</h3>
+        <table>
+            <tr>
+                <td>Item</td>
+                <td>Qty</td>
+                <td>Price</td>
+                <td>Total</td>
+            </tr>
+            <tr>
+                <td>Four 100 watt bulbs for Rs. 20.39 </td>
+                <td>0</td>
+                <td>20.39</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Eight 100 watt bulbs for Rs. 40.20</td>
+                <td>0</td>
+                <td>30.95</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Four 100 watt long life bulbs for Rs. 30.95</td>
+                <td>0</td>
+                <td>40.2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Eight 100 watt long life bulbs for Rs. 70.49</td>
+                <td>0</td>
+                <td>70.49</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <h3>Total bill including 13.5% tax: <span class="total"> </span> payment mode: <span class="mode"></span></h3>
+    </div>
+    <script>
+        $(document).ready(function () {
+        var name = $('#user').val();
+        for (let index = 1; index < 5; index++) {
+            var n =  $(".v"+index).val()
+            console.log(n)
+        }
+      });
+    </script>
+</body>
+</html>

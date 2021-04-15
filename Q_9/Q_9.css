@@ -1,0 +1,12 @@
+#container{
+    position: relative;
+    left: 300px;
+    width: 700px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+.header{
+    background-color: yellow;
+    border: 1px solid black;
+}

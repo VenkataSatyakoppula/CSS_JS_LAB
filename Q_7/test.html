@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>
+    Xhtml code
+  </title>
+</head>
+<body>
+  <p>User:
+    <span><input type="text" id="user" placeholder="user"></span>
+  </p>
+  <div style="display: flex;align-items: center;justify-content: space-around;">
+    <h3>Select the Items</h3>
+    <div>
+      <h3>Quantity</h3>
+    </div>
+  </div>
+  <div style="display: flex;align-items: center;justify-content: space-around;">
+    <input type="checkbox" id="c1" value="on">
+    <p>Four 100 watts bulbs for RS 20.39</p>
+    <input type="number" id="i1">
+  </div>
+  <div style="display: flex;align-items: center;justify-content: space-around;">
+    <input type="checkbox" id="c2">
+    <p>Four 100 watts bulbs for RS 40.20</p>
+    <input type="number" id="i2">
+  </div>
+  <div style="display: flex;align-items: center;justify-content: space-around;">
+    <input type="checkbox" id="c3">
+    <p>Four 100 watts long life bulbs for RS 30.95</p>
+    <input type="number" id="i3">
+  </div>
+  <div style="display: flex;align-items: center;justify-content: space-around;">
+    <input type="checkbox" id="c4">
+    <p>Four 100 watts long life bulbs for RS 70.49</p>
+    <input type="number" id="i4">
+  </div>
+  <div>
+    <p><input type="radio" id="visa1" value="Visa" name="payment">Visa</p>
+    <p><input type="radio" id="visa2" value="MasterCard" name="payment">Mastercard</p>
+    <input type="radio" id="visa3" value="Discover" name="payment">Discover
+  </div>
+  <div style="display: flex;justify-content: space-around;">
+    <button type="submit" onclick="myFunction()">Submit</button>
+    <div>
+      <!-- <button type="reset">Reset Order</button> -->
+    </div>
+  </div>
+  <div>
+    <p id="usename"></p>
+    <h2>You have Order Following items</h2>
+    <table style="width:100%">
+      <tr>
+        <th>item</th>
+        <th colspan="2">Qty</th>
+        <th colspan="2">Price</th>
+        <th colspan="2">Total</th>
+      </tr>
+      <tr>
+        <td>Four 100 watts bulbs for RS 20.39</td>
+        <td id="frm1value"></td>
+        <td>
+          20.39
+        </td>
+        <td id="total1"></td>
+      </tr>
+      <tr>
+        <td>Four 100 watts bulbs for RS 40.20</td>
+        <td id="frm2value"></td>
+        <td>40.20</td>
+        <td id="total2"></td>
+      </tr>
+      <tr>
+        <td>Four 100 watts long life bulbs for RS 30.95
+        </td>
+        <td id="frm3value"></td>
+        <td>30.95</td>
+        <td id="total3"></td>
+      </tr>
+      <tr>
+        <td>Four 100 watts long life bulbs for RS 70.49
+        </td>
+        <td id="frm4value"></td>
+        <td>70.49</td>
+        <td id="total4"></td>
+      </tr>
+    </table>
+  </div>
+  <p>Total Bill including 13.5% tax <span id="gTotal"></span> Payment Mode <span id="payment"></span></p>
+</body>
+<script>
+  var data;
+  var frm1;
+  var frm2;
+  var frm3;
+  var frm4;
+  var c1;
+  var c2;
+  var c3;
+  var c4;
+  var r1;
+  var r2;
+  var r3;
+  function myFunction() {
+    data = document.getElementById('user').value;
+    document.getElementById('usename').innerHTML = 'User Name :' + data;
+    var frm1 = document.getElementById('c1').value;
+    var c1 = document.getElementById('i1').value;
+    console.log(frm1);
+    if (frm1 == 'on') {
+      var form1 = c1 * 20.39;
+      frm1value = c1;
+      document.getElementById('frm1value').innerHTML = frm1value;
+      document.getElementById('total1').innerHTML = form1;
+      g1 = form1;
+
+    }
+    if (document.getElementById('c2').value == 'on') {
+      var form2 = document.getElementById('i2').value * 40.20;
+      frm2value = document.getElementById('i2').value;
+      document.getElementById('frm2value').innerHTML = document.getElementById('i2').value;;
+      document.getElementById('total2').innerHTML = document.getElementById('i2').value * 40.20;
+      g2 = document.getElementById('i2').value * 40.20;
+
+    }
+    if (document.getElementById('c3').value == 'on') {
+      document.getElementById('frm3value').innerHTML = document.getElementById('i3').value;;
+      document.getElementById('total3').innerHTML = document.getElementById('i3').value * 30.95;
+      g3 = document.getElementById('i3').value * 30.95
+
+    }
+    if (document.getElementById('c4').value == 'on') {
+      document.getElementById('frm4value').innerHTML = document.getElementById('i4').value;;
+      document.getElementById('total4').innerHTML = document.getElementById('i4').value * 70.49;
+      g4 = document.getElementById('i4').value * 70.49;
+
+    }
+    var tot = (g1 + g2 + g3 + g4) / 13.5 * 100;
+    document.getElementById('gTotal').innerHTML = tot
+    var type;
+    if (document.getElementById('visa1') == 'on') {
+      type = document.getElementById('visa1').value
+    }
+    else if (document.getElementById('visa2') == 'on') {
+      type = document.getElementById('visa2').value
+    }
+    else {
+      type = document.getElementById('visa3').value
+    }
+    document.getElementById('payment').innerHTML = type;
+}
+</script>
+
+</html>

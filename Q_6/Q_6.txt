@@ -1,0 +1,23 @@
+Write the JQuery code to add behavior to the following page for 
+keeping track of a to- do-list.
+The page UI allows the user to type an item into a text box. 
+The user can click the "add" button to add the item to the bottom of
+ the list. Each word in the phrase should be inserted as a li, inside an ul
+  with the id of list.If the user wishes to remove an item he or she can type
+   the text of the item he or
+
+
+she wishes to remove in the text box and click the 
+“remove” button. This should be case insensitive. For example, 
+if the list only contains “foo” and the user tries to remove “FoO”, 
+it should be removed. If the user tries to remove an item that is in
+ the list multiple times only the first occurrence should be removed.
+
+The items should have background colors that alternate
+ between white and yellow (first white, then yellow, then white, yellow, etc.). 
+ This should still be the case no matter how many items are removed or added and
+  no matter what order these operations are done in.The code should work for 
+  multiple clicks of the buttons. On each click it should clear any previous 
+  information you typed in the input boxes.
+These screenshots show the state after items have been added and the state 
+after items have been removed.

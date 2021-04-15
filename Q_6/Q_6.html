@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19BCI0142 Venkata satya</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<style>
+    ul{
+        position: relative;
+        width: 200px;
+    }
+    li{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <h1>My Super nifty to-do list</h1>
+    <ul>
+    </ul>
+    <input type="text" class="input"> 
+    <button class="add">Add</button> 
+    <button class="remove">Remove</button> 
+    <script>
+        $(document).ready(function () {
+            var i=1;
+            $('.add').on('click',function () {
+                var input = $('.input').val();
+                $('ul').append("<li>"+input+"</li>")
+                i = i+1;
+                console.log(i); 
+            });
+            $('.remove').on('click',function () {
+                var input = $('.input').val().toLowerCase();
+                $('li').each(function(index){
+                    if ($(this).text().toLowerCase()==input){
+                        $(this).remove();
+                    }
+                });
+                
+                i = i-1;
+            });
+            setInterval(function () {
+                $('ul li:nth-child(2n)').css("background-color","yellow");
+            },10)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Write the code to create the form with the following capabilities
+A text widget to collect the users nameFour check boxes, one each for the following items
+Four 100 watt light bulbs for Rs. 20=39Eight 100 watt light bulbs for 
+Rs 40=20Four 100 watt long life light bulbs for Rs. 30=95Eight 
+100 watt long life light bulbs for Rs 70=49
+A collection of 3 radio buttons that are labeled as follows
+VisaMaster CardDiscover
+Computes the total cost of the ordered light bulbs for th
+e above program after adding 13.5% VAT. The program must 
+inform the buyer of exactly what was ordered in ta

@@ -1,0 +1,6 @@
+Design the following web page and write the Jquery code to do the
+following:
+The desired behaviour of the above page is when the button is clicked, all
+occurrences of the word Blue should be changed to the text specified in the
+input field. Example - The input field currently has the world Purple.
+image

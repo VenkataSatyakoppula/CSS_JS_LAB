@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19BCI0142 venkata satya</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>deleting Divisibility </h1>
+
+    <label for="divide">Divisible by:</label>
+    <input type="text" name="divide" id="divide">
+    <button id="del">delete</button> <br>
+    <button id="res">Reset</button>
+    <br>
+    <p>Click a button:</p>
+    <button>11</button>
+    <button>22</button>
+    <button>34</button>
+    <button>42</button>
+    <button>50</button>
+    <button>63</button>
+    <button>71</button>
+    <script>
+        $(document).ready(function () {
+            $("#del").click(function () {
+                var n = $("#divide").val();
+                $("button").each(function(index,element) {
+                    if (parseInt($(this).text())%n==0 ) {
+                        $(this).hide()
+                    }
+                })
+            })
+            $("#res").click(function () {
+                location.reload()
+            })
+        })
+    </script>
+</body>
+</html>

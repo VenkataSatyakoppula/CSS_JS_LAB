@@ -1,0 +1,7 @@
+Product details are maintained in JSON file
+ and gets it using AJAX.
+Develop the page contains a dropdown
+ list which lists the value of product name.
+While clicking Availability button 
+display the details of corresponding selected 
+product as Product ID, name, price, stock and type.

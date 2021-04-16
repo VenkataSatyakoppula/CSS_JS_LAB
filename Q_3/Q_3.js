@@ -23,7 +23,7 @@ function validate(params) {
     var c=0;
     for (var i = 0;i < n; i++){
         if (document.getElementById("fruits").options[i].selected === false){
-            c = c+1
+            c = c+1;
         }
     }
     console.log(c);

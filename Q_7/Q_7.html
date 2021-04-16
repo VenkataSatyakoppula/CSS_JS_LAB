@@ -36,7 +36,6 @@
     <input type="text" name="user" id="user" >
     <h3>Select the items :</h3>
     <h3 id="quan">Quantity</h3>
-    <form action="">
         <input type="checkbox" name="r1">
         <label for="r1">Four 100 watt bulbs for Rs. 20.39 &nbsp</label> 
         <input type="text" class="v1"> <br>
@@ -56,9 +55,8 @@
         <label for="master">MASTER CARD</label> <br>
         <input type="radio" name="card" id="visa">
         <label for="discover">DISCOVER</label> <br>
-        <input type="submit" value="submit">   
+        <input type="submit" value="submit" class="sub">   
         <button>Reset Order</button>
-    </form>
     <div class="container">
 
     </div>
@@ -99,14 +97,14 @@
         </table>
         <h3>Total bill including 13.5% tax: <span class="total"> </span> payment mode: <span class="mode"></span></h3>
     </div>
-    <script>
-        $(document).ready(function () {
-        var name = $('#user').val();
-        for (let index = 1; index < 5; index++) {
-            var n =  $(".v"+index).val()
-            console.log(n)
-        }
-      });
+    <script src="Q_7.js">
+    //     $(document).ready(function () {
+    //     var name = $('#user').val();
+    //     for (let index = 1; index < 5; index++) {
+    //         var n =  $(".v"+index).val()
+    //         console.log(n)
+    //     }
+    //   });
     </script>
 </body>
 </html>
